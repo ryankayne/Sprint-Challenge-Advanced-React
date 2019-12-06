@@ -13,7 +13,7 @@ export default function Nav() {
     return (
         <div className="navbar">
             <h1>Women's World Cup Data</h1>
-            <button onClick={toggleDarkMode}>Dark Mode: {darkMode ? 'On' : 'Off'}</button>
+            <button onClick={toggleDarkMode}>Turn Dark Mode {darkMode ? 'Off' : 'On'}</button>
         </div>
     )
 }

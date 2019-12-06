@@ -1,8 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+import axios from 'axios';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: []
+    }
+  };
+
+  componentDidMount() {
+    axios.get('http://localhost:5000/api/players')
+    .then(response => {
+      console.log(response)
+      this.setState({ data: response.data })
+    })
+    .catch(error => console.log(error))
+  }
+
+  render() {
   return (
     <div className="App">
       <header className="App-header">
@@ -10,5 +27,5 @@ function App() {
     </div>
   );
 }
-
+}
 export default App;

@@ -3,6 +3,7 @@ import axios from 'axios';
 import styled from "styled-components";
 import './App.css';
 import PlayerInfo from "./PlayerInfo";
+import Nav from './Nav';
 
 
 
@@ -26,7 +27,7 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      
+      <Nav />
         {this.state.data.map(player => (
           <PlayerInfo 
           name={player.name}

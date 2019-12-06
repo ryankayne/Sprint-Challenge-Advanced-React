@@ -1,6 +1,10 @@
 import React from 'react';
 import axios from 'axios';
+import styled from "styled-components";
 import './App.css';
+import PlayerInfo from "./PlayerInfo";
+
+
 
 class App extends React.Component {
   constructor() {
@@ -22,8 +26,13 @@ class App extends React.Component {
   render() {
   return (
     <div className="App">
-      <header className="App-header">
-      </header>
+      
+        {this.state.data.map(player => (
+          <PlayerInfo 
+          name={player.name}
+          country={player.country}
+          searches={player.searches} />
+        ))}
     </div>
   );
 }

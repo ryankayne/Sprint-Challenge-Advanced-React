@@ -10,6 +10,6 @@ it('renders without crashing', () => {
 });
 
 test('contains player', () => {
-  const { getAllByText } = render(<App />);
-  getAllByText(/Rapinoe/i);
+  const { findByText } = render(<App />);
+  findByText(/Rapinoe/i);
 })

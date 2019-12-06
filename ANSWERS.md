@@ -18,3 +18,5 @@
     A custom hook allows you to use other hooks inside it while retaining stateful logic that can be used throughout. 
 
 - [ ] Why is it important to test our apps?
+
+    So we know they work in the real world. You never want to deploy an app that has bugs in it. Plus, there are edge cases that may be more rare that would not be caught if you just tried normal interactions with your app. 
